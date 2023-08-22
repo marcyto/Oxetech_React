@@ -1,7 +1,8 @@
+import './campotexto.css';
 
 function CampoTexto(props){
     return(
-        <div>
+        <div className="campotexto_area">
             <label>{props.label}</label>
             <input placeholder={props.placeholder} />
         </div>

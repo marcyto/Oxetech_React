@@ -1,0 +1,19 @@
+.campo_formulario{
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    padding: 2rem;
+    width: 40%;
+    height: auto;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    
+}
+
+.campo_formulario button{
+    background-color: #6278f7;
+    color: #FFF;
+}
