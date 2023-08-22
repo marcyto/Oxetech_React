@@ -1,0 +1,8 @@
+.header_banner{
+    background-color: #6278f7;
+    text-align: center;
+    width: 100vw;
+}
+.header_banner img{
+    max-width: 100%;
+}

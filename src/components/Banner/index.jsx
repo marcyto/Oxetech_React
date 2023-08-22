@@ -1,11 +1,11 @@
 import React from "react";
-
+import './banner.css'
 
 function Banner(){
     return(
-        <div>
+        <header className="header_banner">
             <img src="./src/assets/HeaderHeader_total.png"/>
-        </div>
+        </header>
     )
 }
 

@@ -8,9 +8,14 @@ function App() {
 
 
   return (
-    <div className='container'>
+    
+    <div >
       <Banner />
+      <div className='container'>
       <Formulario />
+      </div>
+      
+      
     </div>
   )
 }
