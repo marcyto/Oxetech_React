@@ -13,6 +13,45 @@ function App() {
     setColaboradores([...colaboradores, colaborador])
   }
 
+  const times = [
+    {
+      nome: "programação",
+      fundo: "#D9F7E9",
+      card:"#57c278"
+    },
+    {
+      nome: "FrontEnd",
+      fundo: "#E8F8FF",
+      card:"#82CFFA"
+    },
+    {
+      nome: "Data Science",
+      fundo: "#F0F8E2",
+      card:"#A6D157"
+    },
+    {
+      nome: "Devops",
+      fundo: "#FDE7E8",
+      card:"#E06B69"
+    },
+    {
+      nome: "Ux e Design",
+      fundo: "#FAE9F5",
+      card:"#DB6EBF"
+    },
+    {
+      nome: "Mobile",
+      fundo: "#FFF5D9",
+      card:"#FFBA05"
+    },
+    {
+      nome: "Inovação e Gestão",
+      fundo: "#FFEEDF",
+      card:"#FF8A29"
+    },
+    
+  ]
+
 
   return (
 
@@ -20,9 +59,7 @@ function App() {
       <Banner />
       <div className='container'>
         <Formulario novoColaborador={colaborador => AddColaborador(colaborador)} />
-        <Time nome="Programação" />
-        <Time nome="FrontEnd" />
-        <Time nome="Data Science" />
+        {times.map(time => <Time nome={time.nome} fundo={time.fundo} card={time.card}/>)}
       </div>
 
 
