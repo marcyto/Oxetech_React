@@ -1,10 +1,16 @@
 import './select.css'
 
 function Select(props){
+
+    const Digitado = (e) => {
+        props.alterado(e.target.value);
+    }
+
     return(
         <div className='select_area'>
             <label>{props.label}</label>
-            <select >
+            <select value={props.valor} onChange={Digitado}>
+                <option hidden>Selecione seu time...</option>
                 <option>programacao</option>
                 <option>FrontEnd</option>
                 <option>data Science</option>
