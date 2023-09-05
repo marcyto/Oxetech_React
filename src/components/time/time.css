@@ -2,10 +2,22 @@
     width: 70%;
     text-align: center;
     padding: 28px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: flex-start;
 }
 .time h2{
     font-size: 32px;
     border-bottom: 4px solid #57c278;
     display: inline-block;
     padding-bottom: 8px;
+}
+.timeCards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 3rem;
 }

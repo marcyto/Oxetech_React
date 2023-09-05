@@ -9,10 +9,17 @@ function Time(props){
 
 
     return(
+
+        (props.colaboradores.length > 0) ? 
+
         <section className="time" style={cssFundo}>
             <h2 style={cssCard}>{props.nome}</h2>
-            <Colaborador/>
+            <div className="timeCards">
+                {props.colaboradores.map(colaborador => <Colaborador colaborador={colaborador}/>)}
+            </div>
         </section>
+        : ''
+        
     )
 }
 

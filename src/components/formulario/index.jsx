@@ -43,6 +43,7 @@ function Formulario(props) {
             />
             <Select
                 label="Time"
+                times={props.times}
                 valor={time}
                 alterado={valor => setTime(valor)}
             />
