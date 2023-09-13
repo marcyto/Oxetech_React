@@ -2,23 +2,26 @@
 import Colaborador from '../colaborador';
 import './time.css';
 
-function Time(props){
+function Time(props) {
 
-    const cssFundo = {backgroundColor: props.fundo}
-    const cssCard = {borderColor: props.card}
+    const cssFundo = { backgroundColor: props.fundo }
+    const cssCard = { borderColor: props.card }
 
 
-    return(
+    return (
 
-        (props.colaboradores.length > 0) ? 
 
-        <section className="time" style={cssFundo}>
-            <h2 style={cssCard}>{props.nome}</h2>
-            <div className="timeCards">
-                {props.colaboradores.map(colaborador => <Colaborador colaborador={colaborador}/>)}
-            </div>
-        </section>
-        : ''
+        (props.colaboradores.length > 0) ?
+
+            <section className="time" style={cssFundo}>
+                <h2 style={cssCard}>{props.nome}</h2>
+                <div className="timeCards">
+                    {props.colaboradores.map(colaborador => <Colaborador corCard={props.card} colaborador={colaborador} />)}
+                </div>
+            </section>
+
+            : ''
+
         
     )
 }

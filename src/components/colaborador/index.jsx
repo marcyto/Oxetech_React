@@ -3,7 +3,7 @@ import './colaborador.css';
 function Colaborador(props){
     return(
         <div className="colaborador">
-            <div className="cabecalho">
+            <div className="cabecalho" style={{background: props.corCard}}>
                 <img src={props.colaborador.imagem} alt="fotoPerfil"/>
             </div>
             <div className="rodape">

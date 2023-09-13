@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css'
 import Banner from './components/Banner';
-
+import Footer from './components/footer';
 import Formulario from './components/formulario';
 import Time from './components/time';
 
@@ -68,6 +68,7 @@ function App() {
             fundo={time.fundo}
             card={time.card} />)}
       </div>
+      <Footer/>
 
 
     </div>
