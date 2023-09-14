@@ -20,7 +20,7 @@ function Time(props) {
                 </div>
             </section>
 
-            : ''
+        : ''
 
         
     )
