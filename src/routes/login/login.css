@@ -1,0 +1,29 @@
+.form_page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+.form_login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 400px;
+    background-color: #6278f7;
+    border-radius: 2rem;
+    flex-direction: column;
+    gap: 1rem;
+}
+.form_login input{
+    width: 80%;
+    height: 2rem;
+    border: 0;
+    border-radius: 10px;
+}
+.form_login label{
+    font-weight: bold;
+    font-size: 22px;
+    color: #FFF;
+}

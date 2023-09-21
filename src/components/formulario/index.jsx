@@ -6,10 +6,12 @@ import './formulario.css';
 
 function Formulario(props) {
 
+
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
     const [time, setTime] = useState('')
+
 
     function HandleAdd(e){
         e.preventDefault();
@@ -19,6 +21,10 @@ function Formulario(props) {
             imagem,
             time
         })
+       setNome('')
+       setCargo('')
+       setImagem('')
+       setTime('') 
     }
 
     return (

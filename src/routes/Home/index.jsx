@@ -3,10 +3,13 @@ import Formulario from '../../components/formulario';
 import Time from '../../components/time';
 import Footer from '../../components/footer';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import Navbar from '../../components/navbar';
 
 
 export default function Home() {
+
+    
 
     const [colaboradores, setColaboradores] = useState([])
 
@@ -57,7 +60,8 @@ export default function Home() {
 
     return (
 
-        <div >
+        <div>
+            <Navbar />
             <Banner />
             <div className='container'>
                 <Formulario times={times.map(time => time.nome)} novoColaborador={colaborador => AddColaborador(colaborador)} />
@@ -67,8 +71,12 @@ export default function Home() {
                         key={time.nome}
                         nome={time.nome}
                         fundo={time.fundo}
-                        card={time.card} />)}
+                        card={time.card} />
+                )}
+
+
             </div>
+
             <Footer />
 
 

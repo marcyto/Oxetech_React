@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 import Home from './routes/Home';
 import Sobre from './routes/Sobre';
 import Contato from './routes/Contato';
+import Login from './routes/login';
 
 
 function App() {
@@ -22,6 +23,10 @@ function App() {
     {
       path: '/contato',
       element: <Contato/>
+    },
+    {
+      path: '/login',
+      element: <Login/>,
     }
 
 
