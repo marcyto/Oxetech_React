@@ -1,14 +1,27 @@
 import { useState, createContext } from "react";
+import { signInWithEmailAndPassword, signOut, createUserWithEmailAndPassword} from 'firebase/auth';
+import {auth} from '../firebaseconnection.jsx';
+
 
 export const AuthContext = createContext({});
 
 export default function AuthProvider({ children }) {
-  const [user, setUser] = useState({});
 
-  const login = (usuario, senha) => {
-    console.log(usuario, senha);
+  const [user, setUser] = useState({ });
+
+
+
+  const login = async (usuario, senha) => {
+    await signInWithEmailAndPassword(auth, usuario, senha)
+    .then((userCredential)=>{
+      console.log("LOGOU")
+    })
+    .catch((error)=>{
+      console.log(error)
+    })
+    
   };
-  const logout = () => {
+  const logout = () => {  
     console.log("logout");
   };
 
@@ -19,8 +32,17 @@ export default function AuthProvider({ children }) {
         idade:idade,
         senha:senha
     })
-    console.log(user)
+    createUserWithEmailAndPassword(auth, email, senha)
+    .then((userCredential)=>{
+      console.log("Usuario cadastrado")
+      const usuario = userCredential.user
+      console.log(usuario);
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
 
+    console.log(user)
   };
 
   return (

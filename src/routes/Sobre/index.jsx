@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Banner from "../../components/Banner";
 import Footer from "../../components/footer";
 import Navbar from "../../components/navbar";
@@ -22,12 +22,6 @@ export default function Sobre() {
     HandleFetch()
 
   },[])
-
-  
-  
-
-
-
 
   return (
     <div>
@@ -102,3 +96,19 @@ export default function Sobre() {
   );
 }
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

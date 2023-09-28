@@ -58,7 +58,7 @@ export default function Cadastro() {
                 <input type="text" onChange={AddIdade} />
                 <label>Senha</label>
                 <input type="password" onChange={AddSenha} />
-                <button type="submit">Entrar</button>
+                <button type="submit">Cadastrar</button>
                 
             </form>
         </div>
