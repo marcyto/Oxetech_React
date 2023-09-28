@@ -13,3 +13,6 @@
     justify-content: center;
     gap: 1rem;
 }
+.footer_area a{
+    color: black;
+}

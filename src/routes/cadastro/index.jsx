@@ -1,7 +1,8 @@
 import { useEffect, useState, useContext } from "react";
 import logo from '../../assets/logo.png'
-import './login.css'
 import { Link } from "react-router-dom";
+import './cadastro.css'
+
 
 import { AuthContext } from "../../context/auth";
 
@@ -9,9 +10,9 @@ import { AuthContext } from "../../context/auth";
 
 
 
-export default function Login() {
+export default function Cadastro() {
 
-    const {user, login, logout} = useContext(AuthContext)
+    const {user, login, logout, cadastro} = useContext(AuthContext)
 
     useEffect(() => {
         
@@ -20,10 +21,12 @@ export default function Login() {
 
     const [usuario, setUsuario] = useState('')
     const [senha, setSenha] = useState('')
+    const [idade, setIdade] = useState('')
+    const [email, setEmail] = useState('')
 
     function HandleSubmit(e) {
         e.preventDefault();
-        login(usuario, senha)
+        cadastro(usuario, email, idade, senha)
 
     }
     function AddUser(e) {
@@ -32,17 +35,27 @@ export default function Login() {
     function AddSenha(e) {
         setSenha(e.target.value)
     }
+    function AddIdade(e){
+        setIdade(e.target.value)
+    }
+    function AddEmail(e){
+        setEmail(e.target.value)
+    }
 
     return (
         <div className="container">
 
-            <form className="form_login" onSubmit={HandleSubmit}>
+            <form className="form_login cadastro" onSubmit={HandleSubmit}>
                 <div className="logo">
                     <Link to="/"><img src={logo} alt="logo"/></Link>
                 </div>
                
                 <label>Usuário</label>
                 <input type="text" onChange={AddUser} />
+                <label>E-mail</label>
+                <input type="text" onChange={AddEmail} />
+                <label>Idade</label>
+                <input type="text" onChange={AddIdade} />
                 <label>Senha</label>
                 <input type="password" onChange={AddSenha} />
                 <button type="submit">Entrar</button>

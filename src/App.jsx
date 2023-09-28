@@ -6,6 +6,8 @@ import Home from './routes/Home';
 import Sobre from './routes/Sobre';
 import Contato from './routes/Contato';
 import Login from './routes/login';
+import AuthProvider from './context/auth';
+import Cadastro from './routes/cadastro';
 
 
 function App() {
@@ -27,6 +29,10 @@ function App() {
     {
       path: '/login',
       element: <Login/>,
+    },
+    {
+      path: '/cadastro',
+      element: <Cadastro/>,
     }
 
 
@@ -34,7 +40,10 @@ function App() {
 
 
   return(
-    <RouterProvider router={rotas} />
+    <AuthProvider>
+      <RouterProvider router={rotas} />
+    </AuthProvider>
+    
   )
   
 }

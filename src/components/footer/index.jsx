@@ -3,6 +3,7 @@ import './footer.css';
 import logo from '../../assets/logo.png'
 
 import { BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs'
+import { Link } from 'react-router-dom';
 
 
 export default function Footer() {
@@ -17,6 +18,7 @@ export default function Footer() {
                 <img src={logo} />
             </div>
             <h2>Desenvolvido por mim</h2>
+            <Link to="/sobre">sobre</Link>
         </footer>
     )
 }
