@@ -8,7 +8,7 @@ export default function Contato(){
             <Navbar/>
             <Banner/>
             <div className="container">
-                <h1>Contato</h1>
+                <h1>Pagina de contato</h1>
             </div>
             <Footer/>
         </div>
