@@ -4,6 +4,8 @@ import Footer from "../../components/footer";
 import Navbar from "../../components/navbar";
 import { AuthContext } from "../../context/auth";
 import axios from "axios";
+import Cards from "../../components/cards";
+import './sobre.css'
 
 export default function Sobre() {
 
@@ -27,15 +29,20 @@ export default function Sobre() {
     <div>
       <Navbar />
       <Banner />
-      <div className="container">
+      <div className="container sobre_area">
         {data.map((item) => {
           return(
-            <div key={item.cell}>
-              <p>{item.gender}</p>
-              <p>{item.name.first}</p>
-            </div>
+            <Cards 
+              key={item.cell} 
+              foto={item.picture.medium} 
+              nome={item.name.first}
+              idade={item.dob.age}
+              email={item.email}
+              sexo={item.gender}
+            />
           )
         })}
+        
       </div>
       <Footer />
     </div>
